@@ -38,7 +38,6 @@ export const ChecklistEditForm = ({ id, title: initialTitle, items: initialItems
     e.preventDefault();
     // Here you would typically send the updated checklist to your API
     console.log("Submitting updated checklist:", { id, title, items });
-    // After successful update, redirect to the main page
     router.push("/");
   };
 
