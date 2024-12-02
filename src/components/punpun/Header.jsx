@@ -4,6 +4,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { buttonVariants } from "@/components/ui/button";
+import { ThemeSwitcher } from "@/components/punpun/ThemeSwitcher";
 import { Home } from "lucide-react";
 import { Moon } from "lucide-react";
 
@@ -25,9 +26,7 @@ export const Header = () => {
             <Link href="#" className={cn(buttonVariants({ variant: "ghost" }))}>
               <Home />
             </Link>
-            <Link href="#" className={cn(buttonVariants({ variant: "ghost" }))}>
-              <Moon />
-            </Link>
+            <ThemeSwitcher />
           </div>
           <Button>New Checklist</Button>
         </nav>
