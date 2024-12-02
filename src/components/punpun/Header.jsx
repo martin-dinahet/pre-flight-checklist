@@ -7,6 +7,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { ThemeSwitcher } from "@/components/punpun/ThemeSwitcher";
 import { Home } from "lucide-react";
 import { Moon } from "lucide-react";
+import { NewChecklistButton } from "@/components/punpun/NewChecklistButton";
 
 export const Header = () => {
   return (
@@ -16,7 +17,7 @@ export const Header = () => {
           "w-full sticky top-0 bg-background",
           "flex justify-between items-center",
           "border-b",
-          "px-4 py-3"
+          "p-3"
         )}>
         <Link href="/" className={cn(buttonVariants({ variant: "ghost" }), "text-xl font-bold")}>
           Pre-flight checklist
@@ -27,8 +28,8 @@ export const Header = () => {
               <Home />
             </Link>
             <ThemeSwitcher />
+            <NewChecklistButton></NewChecklistButton>
           </div>
-          <Button>New Checklist</Button>
         </nav>
       </header>
     </>

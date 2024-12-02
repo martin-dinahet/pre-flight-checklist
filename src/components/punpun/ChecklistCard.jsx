@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Pen } from "lucide-react";
 import { Trash } from "lucide-react";
+import { DeleteChecklist } from "@/components/punpun/DeleteChecklist";
 
 export const ChecklistCard = ({ id, title, description, status, className = "", ...props }) => {
   return (
@@ -22,9 +23,7 @@ export const ChecklistCard = ({ id, title, description, status, className = "", 
             <Link href={`/edit/${id}`} className={buttonVariants({ variant: "outline" })}>
               <Pen /> Edit
             </Link>
-            <Button variant="destructive">
-              <Trash /> Delete
-            </Button>
+            <DeleteChecklist id={id}></DeleteChecklist>
           </div>
         </div>
       </div>
